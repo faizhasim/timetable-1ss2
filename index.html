@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Classroom Time</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+    <style>@page { size: A4 landscape }</style>
+
+    <style>
+        body {
+            -webkit-print-color-adjust: exact !important;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .sheet.padding-std {padding: 10mm 5mm;}
+
+        table.table thead th div.th-tag:first-child {
+            text-align: center;
+        }
+
+        table.table thead th div.th-tag span {
+            font-size: 0.7rem;
+        }
+
+        table.table thead th div.period {
+            text-align: left;
+            font-size: 0.75rem;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        table.table tbody tr th {
+            text-align: center;
+            font-size: 0.8rem;
+            height: 8rem;
+        }
+
+        table.table tbody tr td {
+            position: relative;
+            font-size: 0.8rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .venue {
+            text-align: center;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+        }
+
+        table.table tbody tr td>div:nth-last-child(1){
+            font-size: 0.9rem;
+            text-align: right;
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+        }
+
+        table.table tbody tr td>div:first-child {
+            font-size: 1.3rem;
+            text-align: left;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+
+
+        .has-90-degree-text {
+            transform: rotate(-90deg) ;
+            transform-origin: 221% 25%;
+            font-size: 1rem !important;
+        }
+
+        div.rehat {
+            position: absolute;
+            top: 3rem !important;
+            text-align: center !important;
+            font-size: 1.1rem !important;
+        }
+
+        .calendar-icon {
+            font-size: 1.5rem;
+        }
+
+        .day {
+            position: relative;
+            top: 3rem;
+        }
+    </style>
+</head>
+<body class="A4 landscape">
+<section class="section sheet padding-std">
+    <table class="table is-bordered is-striped is-fullwidth">
+        <thead>
+            <th class="calendar-icon has-background-grey has-text-light">
+                <div>
+                    <span class="icon">
+                        <i class="fas fa-calendar"></i>
+                    </span>
+                </div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div>&nbsp;</div>
+                <div class="period">7:30 - 7:40</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">1</span></div>
+                <div class="period">7:40 - 8:10</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">2</span></div>
+                <div class="period">8:10 - 9:40</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">3</span></div>
+                <div class="period">8:40 - 9:10</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">4</span></div>
+                <div class="period">9:10 - 9:40</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">5</span></div>
+                <div class="period">9:40 - 10:00</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">6</span></div>
+                <div class="period">10:00 - 10:30</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">7</span></div>
+                <div class="period">10:30 - 11:00</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">8</span></div>
+                <div class="period">11:00 - 11:30</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">9</span></div>
+                <div class="period">11:30 -12:00</div>
+            </th>
+            <th class="has-background-grey has-text-light">
+                <div class="th-tag"><span class="tag is-rounded is-light">10</span></div>
+                <div class="period">12:00 - 12:30</div>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <th><div class="day">Isnin</div></th>
+                <td class="has-90-degree-text" rowspan="5">Kumpul</td>
+                <td><div>PH</div></td>
+                <td colspan="2">
+                    <div>BI 1</div>
+                    <div>Hoe Kian / Chan</div>
+                </td>
+                <td>
+                    <div>SN1</div>
+                    <div>Azwan Adibah</div>
+                </td>
+                <td><div class="rehat">Rehat</div></td>
+                <td colspan="2">
+                    <div>PI/ML</div>
+                    <div>
+                        <div>Atiqah/Akma</div>
+                        <div>Kavitha</div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div>BA</div>
+                        <div>BT1</div>
+                    </div>
+                    <div>
+                        <div>Atiqah/Akma</div>
+                        <div>Kavitha</div>
+                    </div>
+                </td>
+                <td colspan="2">
+                    <div>BM1</div>
+                    <div class="venue"><span class="tag is-dark has-text-weight-bold">PSS</span></div> <!-- venue -->
+                    <div>Ropi/Zuhdi</div>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="day">Selasa</div></th>
+                <td colspan="2">
+                    <div>MT2</div>
+                    <div>Shirley / Fairizal</div>
+                </td>
+                <td colspan="2">
+                    <div>PJK</div>
+                    <div class="venue"><span class="tag is-dark has-text-weight-bold">Padang</span></div>
+                    <div>GPK KK/Rizkhan</div>
+                </td>
+                <td><div class="rehat">Rehat</div></td>
+                <td>
+                    <div>BI 1</div>
+                    <div>Hoe Kian Chan</div>
+                </td>
+                <td colspan="2">
+                    <div>BM1</div>
+                    <div>Ropi/Zuhdi</div>
+                </td>
+                <td colspan="2">
+                    <div>PI/ML</div>
+                    <div>
+                        <div>Atiqah/Akma</div>
+                        <div>Kavitha</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="day">Rabu</div></th>
+                <td colspan="2">
+                    <div>BI1</div>
+                    <div class="venue"><span class="tag is-dark has-text-weight-bold">PSS</span></div> <!-- venue -->
+                    <div>Hoe Kian/Chan</div>
+                </td>
+                <td colspan="2">
+                    <div>MT2</div>
+                    <div>Shirley / Fairizal</div>
+                </td>
+                <td><div class="rehat">Rehat</div></td>
+                <td>
+                    <div>PI/ML</div>
+                    <div>
+                        <div>Atiqah/Akma</div>
+                        <div>Kavitha</div>
+                    </div>
+                </td>
+                <td colspan="2">
+                    <div>SN1</div>
+                    <div>Azwan Adibah</div>
+                </td>
+                <td colspan="2">
+                    <div>BM1</div>
+                    <div>Ropi/Zuhdi</div>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="day">Khamis</div></th>
+                <td colspan="2">
+                    <div>BI 1</div>
+                    <div>Hoe Kian / Chan</div>
+                </td>
+                <td colspan="2">
+                    <div>BM1</div>
+                    <div class="venue"><span class="tag is-dark has-text-weight-bold">PSS</span></div> <!-- venue -->
+                    <div>Ropi/Zuhdi</div>
+                </td>
+                <td><div class="rehat">Rehat</div></td>
+                <td colspan="2">
+                    <div>BA/BT1</div>
+                    <div>
+                        <div>Rafidah/Akma</div>
+                        <div>Kavitha</div>
+                    </div>
+                </td>
+                <td colspan="3">
+                    <div>KSENI</div>
+                    <div>GPK KK</div>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="day">Jumaat</div></th>
+                <td colspan="2">
+                    <div>Tsmk2</div>
+                    <div>Marlina</div>
+                </td>
+                <td colspan="2">
+                    <div>MT2</div>
+                    <div>Shirley/Fairizal</div>
+                </td>
+                <td><div class="rehat">Rehat</div></td>
+                <td colspan="2">
+                    <div>BI 1</div>
+                    <div>Hoe Kian / Chan</div>
+                </td>
+                <td colspan="2">
+                    <div>BM1</div>
+                    <div>Ropi/Zuhdi</div>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
