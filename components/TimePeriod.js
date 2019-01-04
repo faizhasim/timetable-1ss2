@@ -49,17 +49,16 @@ const Tag = styled.span`
   border-radius: 290486px;
 `
 
-export default ({tag, start, end}) =>
-  tag?
-    <Container>
+export default ({ tag, start, end }) =>
+  tag
+    ? <Container>
       <Top>{
-        tag.trim().length ?
-          <Tag>{tag}</Tag> :
-          ' '
+        tag.trim().length
+          ? <Tag>{tag}</Tag>
+          : ' '
       }</Top>
       <Bottom>{start} - {end}</Bottom>
-    </Container> :
-    <Container>
+    </Container>
+    : <Container>
       <Top>{start} - {end}</Top>
     </Container>
-

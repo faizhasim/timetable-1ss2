@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import styled from '@emotion/styled'
-import {childContainer, container} from "../styles/gridLayoutCell"
+import { childContainer, container } from '../styles/gridLayoutCell'
 
 const Container = styled.div`
   ${container}
@@ -16,7 +16,7 @@ const Day = styled.div`
   color: whitesmoke;
 `
 
-export default ({children}) =>
+export default ({ children }) =>
   <Container>
     <Day>{children}</Day>
   </Container>

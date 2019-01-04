@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 export default class extends Document {
   static async getInitialProps (props) {
     const documentProps = await super.getInitialProps(props)
-    return { ...documentProps, helmet: Helmet.renderStatic()}
+    return { ...documentProps, helmet: Helmet.renderStatic() }
   }
 
   constructor (props) {
@@ -42,7 +42,7 @@ export default class extends Document {
           { property: 'og:title', content: 'Hello next.js!' }
         ]}
       >
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' />
         <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
       </Helmet>
     )

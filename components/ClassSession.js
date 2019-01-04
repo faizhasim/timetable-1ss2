@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 import styled from '@emotion/styled'
-import {childContainer, container} from "../styles/gridLayoutCell"
+import { childContainer, container } from '../styles/gridLayoutCell'
 
 const Container = styled.div`
   ${container}
@@ -48,9 +48,9 @@ const Venue = styled.div`
   color: #f5f5f5;
 `
 
-export default ({subject, teacher, venue}) =>
+export default ({ subject, teacher, venue }) =>
   <Container>
     <Subject>{subject}</Subject>
-    {venue? <Venue>{venue}</Venue> : ''}
-    {teacher? <Teacher>{teacher}</Teacher> : ''}
+    {venue ? <Venue>{venue}</Venue> : ''}
+    {teacher ? <Teacher>{teacher}</Teacher> : ''}
   </Container>

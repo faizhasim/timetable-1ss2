@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import {css, Global} from "@emotion/core";
+import React from 'react'
+import styled from '@emotion/styled'
+import { css, Global } from '@emotion/core'
 
 const sheetCss = ({ width, height, padding }) => css`
   margin: 0;
@@ -8,7 +8,7 @@ const sheetCss = ({ width, height, padding }) => css`
   position: relative;
   box-sizing: border-box;
   page-break-after: always;
-  padding: ${padding? padding : '10mm 5mm'};
+  padding: ${padding || '10mm 5mm'};
   @media screen {
       & {
           background: white;
@@ -34,13 +34,12 @@ const bodyCss = width => css`
   
 `
 
-export const Sheet = ({width, height, padding = '10mm 5mm', children}) => {
-
+export const Sheet = ({ width, height, padding = '10mm 5mm', children }) => {
   const Sheet = styled.section`
     ${sheetCss};
   `
   return <>
-    <Global styles={bodyCss(width, height)}/>
+    <Global styles={bodyCss(width, height)} />
     <Sheet width={width} height={height} padding={padding}>
       {children}
     </Sheet>
