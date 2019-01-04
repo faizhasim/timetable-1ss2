@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { childContainer, container } from '../styles/gridLayoutCell'
 
 const Container = styled.div`
-  ${container}
+  ${container};
 `
 
 const FullColumn = styled.div`
@@ -14,7 +14,8 @@ const FullColumn = styled.div`
   transform: rotate(-90deg);
 `
 
-export default ({ children }) =>
+export default ({ children }) => (
   <Container>
     <FullColumn>{children}</FullColumn>
   </Container>
+)

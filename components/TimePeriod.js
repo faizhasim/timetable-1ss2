@@ -18,15 +18,13 @@ const showCss = css`
 `
 
 const Top = styled.div`
-  ${showCss}
-  top: .256rem;
+  ${showCss} top: .256rem;
   font-weight: bold;
 `
 
 const Bottom = styled.div`
-  ${showCss}
-  bottom: .0625rem;
-  font-size: .75rem;
+  ${showCss} bottom: .0625rem;
+  font-size: 0.75rem;
   font-weight: light;
   color: whitesmoke;
 `
@@ -42,23 +40,25 @@ const Tag = styled.span`
   padding-left: 0.5em;
   padding-right: 0.5em;
   white-space: nowrap;
-  
+
   background-color: whitesmoke;
   color: #7a7a7a;
-  
+
   border-radius: 290486px;
 `
 
 export default ({ tag, start, end }) =>
-  tag
-    ? <Container>
-      <Top>{
-        tag.trim().length
-          ? <Tag>{tag}</Tag>
-          : ' '
-      }</Top>
-      <Bottom>{start} - {end}</Bottom>
+  tag ? (
+    <Container>
+      <Top>{tag.trim().length ? <Tag>{tag}</Tag> : ' '}</Top>
+      <Bottom>
+        {start} - {end}
+      </Bottom>
     </Container>
-    : <Container>
-      <Top>{start} - {end}</Top>
+  ) : (
+    <Container>
+      <Top>
+        {start} - {end}
+      </Top>
     </Container>
+  )

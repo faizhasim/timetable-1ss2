@@ -42,7 +42,10 @@ export default class extends Document {
           { property: 'og:title', content: 'Hello next.js!' }
         ]}
       >
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' />
+        <link
+          href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto'
+          rel='stylesheet'
+        />
         <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
       </Helmet>
     )
