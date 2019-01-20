@@ -5,6 +5,19 @@ import Day from './Day'
 import TimePeriod from './TimePeriod'
 import FullColumn from './FullColumn'
 import ClassSession from './ClassSession'
+import {
+  BookIcon,
+  BookWithCaptionIcon,
+  CalculatorIcon,
+  FlaskIcon,
+  GlobeAmericasIcon,
+  GlobeAsiaIcon,
+  PaletteIcon,
+  QuranIcon,
+  RunningIcon,
+  StarAndCrescentIcon,
+  UsersIcon
+} from './Icons'
 
 const globalCss = css`
   body {
@@ -291,115 +304,232 @@ export default () => {
         </div>
 
         <div key='isnin-ph'>
-          <ClassSession subject='PH' />
+          <ClassSession
+            subject='PH'
+            subjectSubTitle='Perhimpunan'
+            icon={<UsersIcon />}
+          />
         </div>
         <div key='isnin-pi'>
           <ClassSession
-            subject='PI/ML'
+            subject='PI'
+            icon={<StarAndCrescentIcon />}
+            subjectSubTitle='Pendidikan Islam'
             teacher={
               <Fragment>
-                Atiqah/Akma<br />Kavitha
+                Atiqah/Akma
+                <br />
+                Kavitha
               </Fragment>
             }
           />
         </div>
         <div key='isnin-bm1'>
-          <ClassSession subject='BM1' teacher='Ropi/Zuhdi' />
+          <ClassSession
+            subject='BM1'
+            icon={<BookWithCaptionIcon caption='ms' />}
+            subjectSubTitle='Bahasa Melayu'
+            teacher='Ropi/Zuhdi'
+          />
         </div>
         <div key='isnin-bi'>
-          <ClassSession subject='BI 1' teacher='Hoe Kian / Chan' />
+          <ClassSession
+            subject='BI 1'
+            icon={<BookWithCaptionIcon caption='en' />}
+            subjectSubTitle='English'
+            teacher='Hoe Kian / Chan'
+          />
         </div>
         <div key='isnin-kseni'>
-          <ClassSession subject='KSENI' teacher='GPK KK' />
+          <ClassSession
+            subject='KSENI'
+            icon={<PaletteIcon />}
+            subjectSubTitle='Kemahiran Seni'
+            teacher='GPK KK'
+          />
         </div>
 
         <div key='selasa-bm1'>
-          <ClassSession subject='BM1' teacher='Ropi/Zuhdi' />
+          <ClassSession
+            subject='BM1'
+            icon={<BookWithCaptionIcon caption='ms' />}
+            subjectSubTitle='Bahasa Melayu'
+            teacher='Ropi/Zuhdi'
+          />
         </div>
         <div key='selasa-mt2'>
-          <ClassSession subject='MT2' teacher='Shirley / Fairizal' />
+          <ClassSession
+            subject='MT2'
+            icon={<CalculatorIcon />}
+            subjectSubTitle='Matematik'
+            teacher='Shirley / Fairizal'
+          />
         </div>
         <div key='selasa-pi'>
           <ClassSession
-            subject='PI/ML'
+            subject='PI'
+            icon={<StarAndCrescentIcon />}
+            subjectSubTitle='Pendidikan Islam'
             teacher={
               <Fragment>
-                Atiqah/Akma<br />Kavitha
+                Atiqah/Akma
+                <br />
+                Kavitha
               </Fragment>
             }
           />
         </div>
         <div key='selasa-bi'>
-          <ClassSession subject='BI 1' teacher='Hoe Kian / Chan' />
+          <ClassSession
+            subject='BI 1'
+            icon={<BookWithCaptionIcon caption='en' />}
+            subjectSubTitle='English'
+            teacher='Hoe Kian / Chan'
+          />
         </div>
         <div key='selasa-sn1'>
-          <ClassSession subject='SN1' teacher='Azwan Adibah' />
+          <ClassSession
+            subject='SN1'
+            icon={<FlaskIcon />}
+            subjectSubTitle='Sains'
+            teacher='Azwan Adibah'
+          />
         </div>
 
         <div key='rabu-bm1'>
-          <ClassSession subject='BM1' teacher='Ropi/Zuhdi' venue='PSS' />
+          <ClassSession
+            subject='BM1'
+            icon={<BookWithCaptionIcon caption='ms' />}
+            subjectSubTitle='Bahasa Melayu'
+            teacher='Ropi/Zuhdi'
+            venue='PSS'
+          />
         </div>
         <div key='rabu-ba'>
           <ClassSession
-            subject='BA/BT1'
+            subject='BA'
+            icon='ابت'
+            subjectSubTitle='Bahasa Arab'
             teacher={
               <Fragment>
-                Rafidah/Akma<br />Kavitha
+                Rafidah/Akma
+                <br />
+                Kavitha
               </Fragment>
             }
           />
         </div>
         <div key='rabu-bi'>
-          <ClassSession subject='BI 1' teacher='Hoe Kian / Chan' />
+          <ClassSession
+            subject='BI 1'
+            icon={<BookWithCaptionIcon caption='en' />}
+            subjectSubTitle='English'
+            teacher='Hoe Kian / Chan'
+          />
         </div>
         <div key='rabu-pi'>
           <ClassSession
-            subject='PI/ML'
+            subject='PI'
+            icon={<StarAndCrescentIcon />}
+            subjectSubTitle='Pendidikan Islam'
             teacher={
               <Fragment>
-                Atiqah/Akma<br />Kavitha
+                Atiqah/Akma
+                <br />
+                Kavitha
               </Fragment>
             }
           />
         </div>
         <div key='rabu-mt2'>
-          <ClassSession subject='MT2' teacher='Shirley / Fairizal' />
+          <ClassSession
+            subject='MT2'
+            icon={<CalculatorIcon />}
+            subjectSubTitle='Matematik'
+            teacher='Shirley / Fairizal'
+          />
         </div>
 
         <div key='khamis-sn1'>
-          <ClassSession subject='SN1' teacher='Azwan Adibah' />
+          <ClassSession
+            subject='SN1'
+            icon={<FlaskIcon />}
+            subjectSubTitle='Sains'
+            teacher='Azwan Adibah'
+          />
         </div>
         <div key='khamis-pjk'>
-          <ClassSession subject='PJK' teacher='GPK KK/Rizkhan' venue='Padang' />
+          <ClassSession
+            subject='PJK'
+            icon={<RunningIcon />}
+            subjectSubTitle='Pendidikan Jasmani & Kesihatan'
+            teacher='GPK KK/Rizkhan'
+            venue='Padang'
+          />
         </div>
         <div key='khamis-ba'>
           <ClassSession
-            subject='BA/BT1'
+            subject='BA'
+            icon='ابت'
+            subjectSubTitle='Bahasa Arab'
             teacher={
               <Fragment>
-                Rafidah/Akma<br />Kavitha
+                Rafidah/Akma
+                <br />
+                Kavitha
               </Fragment>
             }
           />
         </div>
         <div key='khamis-bm1'>
-          <ClassSession subject='BM1' teacher='Ropi/Zuhdi' />
+          <ClassSession
+            subject='BM1'
+            icon={<BookWithCaptionIcon caption='ms' />}
+            subjectSubTitle='Bahasa Melayu'
+            teacher='Ropi/Zuhdi'
+          />
         </div>
         <div key='khamis-bi'>
-          <ClassSession subject='BI 1' teacher='Hoe Kian / Chan' />
+          <ClassSession
+            subject='BI 1'
+            icon={<BookWithCaptionIcon caption='en' />}
+            subjectSubTitle='English'
+            teacher='Hoe Kian / Chan'
+          />
         </div>
 
         <div key='jumaat-tsmk2'>
-          <ClassSession subject='Tsmk2' teacher='Marlina' />
+          <ClassSession
+            subject='Tsmk2'
+            icon={<QuranIcon />}
+            subjectSubTitle='Tasmik'
+            teacher='Marlina'
+          />
         </div>
         <div key='jumaat-mt2'>
-          <ClassSession subject='MT2' teacher='Shirley / Fairizal' />
+          <ClassSession
+            subject='MT2'
+            icon={<CalculatorIcon />}
+            subjectSubTitle='Matematik'
+            teacher='Shirley / Fairizal'
+          />
         </div>
         <div key='jumaat-bi'>
-          <ClassSession subject='BI 1' teacher='Hoe Kian / Chan' venue='PSS' />
+          <ClassSession
+            subject='BI 1'
+            icon={<BookWithCaptionIcon caption='en' />}
+            subjectSubTitle='English'
+            teacher='Hoe Kian / Chan'
+            venue='PSS'
+          />
         </div>
         <div key='jumaat-bm1'>
-          <ClassSession subject='BM1' teacher='Ropi/Zuhdi' />
+          <ClassSession
+            subject='BM1'
+            icon={<BookWithCaptionIcon caption='ms' />}
+            subjectSubTitle='Bahasa Melayu'
+            teacher='Ropi/Zuhdi'
+          />
         </div>
         <div key='jumaat-empty'>
           <FullColumn />
