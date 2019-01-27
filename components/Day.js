@@ -11,7 +11,7 @@ const Day = styled.div`
   text-align: center;
   top: 3rem;
   font-size: 0.9rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: whitesmoke;
 `
 

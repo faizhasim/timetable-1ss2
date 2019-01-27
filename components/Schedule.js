@@ -4,20 +4,16 @@ import React, { Fragment } from 'react'
 import Day from './Day'
 import TimePeriod from './TimePeriod'
 import FullColumn from './FullColumn'
-import ClassSession from './ClassSession'
-import {
-  BookIcon,
-  BookWithCaptionIcon,
-  CalculatorIcon,
-  FlaskIcon,
-  GlobeAmericasIcon,
-  GlobeAsiaIcon,
-  PaletteIcon,
-  QuranIcon,
-  RunningIcon,
-  StarAndCrescentIcon,
-  UsersIcon
-} from './Icons'
+import PH from './class-sessions/PH'
+import PI from './class-sessions/Pi'
+import BM1 from './class-sessions/Bm1'
+import BI1 from './class-sessions/Bi1'
+import KSENI from './class-sessions/KSeni'
+import MT2 from './class-sessions/Mt2'
+import BA from './class-sessions/Ba'
+import PJK from './class-sessions/Pjk'
+import TSMK2 from './class-sessions/Tsmk2'
+import SN1 from './class-sessions/Sn1'
 
 const globalCss = css`
   body {
@@ -147,26 +143,27 @@ export default () => {
     { i: 'rehat', x: 6, y: 1, w: 1, h: 15, static: true },
 
     { i: 'isnin-ph', x: 2, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-pi', x: 3, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-bm1', x: 4, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-bi', x: 7, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-bm1', x: 3, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-ba', x: 5, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-pi', x: 7, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     {
-      i: 'isnin-kseni',
+      i: 'isnin-sn1',
       x: 9,
       y: 1,
-      w: 3,
+      w: 1,
       h: 3,
       minH: 3,
       maxH: 3,
       static: true
     },
+    { i: 'isnin-bi1', x: 10, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
 
     { i: 'selasa-bm1', x: 2, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'selasa-mt2', x: 4, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'selasa-pjk', x: 4, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     { i: 'selasa-pi', x: 7, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'selasa-bi', x: 9, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'selasa-mt2', x: 9, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     {
-      i: 'selasa-sn1',
+      i: 'selasa-bi1',
       x: 11,
       y: 4,
       w: 1,
@@ -176,14 +173,14 @@ export default () => {
       static: true
     },
 
-    { i: 'rabu-bm1', x: 2, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-ba', x: 4, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-bi', x: 7, y: 7, w: 1, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-pi', x: 8, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-mt2', x: 10, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-bi1', x: 2, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-bm1', x: 4, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-pi', x: 7, y: 7, w: 1, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-mt2', x: 8, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-sn1', x: 10, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
 
     {
-      i: 'khamis-sn1',
+      i: 'khamis-bm1',
       x: 2,
       y: 10,
       w: 2,
@@ -193,7 +190,7 @@ export default () => {
       static: true
     },
     {
-      i: 'khamis-pjk',
+      i: 'khamis-mt2',
       x: 4,
       y: 10,
       w: 2,
@@ -202,10 +199,9 @@ export default () => {
       maxH: 3,
       static: true
     },
-    { i: 'khamis-ba', x: 7, y: 10, w: 1, h: 3, minH: 3, maxH: 3, static: true },
     {
-      i: 'khamis-bm1',
-      x: 8,
+      i: 'khamis-bi1',
+      x: 7,
       y: 10,
       w: 2,
       h: 3,
@@ -214,10 +210,10 @@ export default () => {
       static: true
     },
     {
-      i: 'khamis-bi',
-      x: 10,
+      i: 'khamis-kseni',
+      x: 9,
       y: 10,
-      w: 2,
+      w: 3,
       h: 3,
       minH: 3,
       maxH: 3,
@@ -235,7 +231,7 @@ export default () => {
       static: true
     },
     {
-      i: 'jumaat-mt2',
+      i: 'jumaat-ba',
       x: 4,
       y: 13,
       w: 2,
@@ -304,232 +300,80 @@ export default () => {
         </div>
 
         <div key='isnin-ph'>
-          <ClassSession
-            subject='PH'
-            subjectSubTitle='Perhimpunan'
-            icon={<UsersIcon />}
-          />
-        </div>
-        <div key='isnin-pi'>
-          <ClassSession
-            subject='PI'
-            icon={<StarAndCrescentIcon />}
-            subjectSubTitle='Pendidikan Islam'
-            teacher={
-              <Fragment>
-                Atiqah/Akma
-                <br />
-                Kavitha
-              </Fragment>
-            }
-          />
+          <PH />
         </div>
         <div key='isnin-bm1'>
-          <ClassSession
-            subject='BM1'
-            icon={<BookWithCaptionIcon caption='ms' />}
-            subjectSubTitle='Bahasa Melayu'
-            teacher='Ropi/Zuhdi'
-          />
+          <BM1 />
         </div>
-        <div key='isnin-bi'>
-          <ClassSession
-            subject='BI 1'
-            icon={<BookWithCaptionIcon caption='en' />}
-            subjectSubTitle='English'
-            teacher='Hoe Kian / Chan'
-          />
+        <div key='isnin-ba'>
+          <BA />
         </div>
-        <div key='isnin-kseni'>
-          <ClassSession
-            subject='KSENI'
-            icon={<PaletteIcon />}
-            subjectSubTitle='Kemahiran Seni'
-            teacher='GPK KK'
-          />
+        <div key='isnin-pi'>
+          <PI />
+        </div>
+        <div key='isnin-sn1'>
+          <SN1 />
+        </div>
+        <div key='isnin-bi1'>
+          <BI1 />
         </div>
 
         <div key='selasa-bm1'>
-          <ClassSession
-            subject='BM1'
-            icon={<BookWithCaptionIcon caption='ms' />}
-            subjectSubTitle='Bahasa Melayu'
-            teacher='Ropi/Zuhdi'
-          />
+          <BM1 />
         </div>
-        <div key='selasa-mt2'>
-          <ClassSession
-            subject='MT2'
-            icon={<CalculatorIcon />}
-            subjectSubTitle='Matematik'
-            teacher='Shirley / Fairizal'
-          />
+        <div key='selasa-pjk'>
+          <PJK />
         </div>
         <div key='selasa-pi'>
-          <ClassSession
-            subject='PI'
-            icon={<StarAndCrescentIcon />}
-            subjectSubTitle='Pendidikan Islam'
-            teacher={
-              <Fragment>
-                Atiqah/Akma
-                <br />
-                Kavitha
-              </Fragment>
-            }
-          />
+          <PI />
         </div>
-        <div key='selasa-bi'>
-          <ClassSession
-            subject='BI 1'
-            icon={<BookWithCaptionIcon caption='en' />}
-            subjectSubTitle='English'
-            teacher='Hoe Kian / Chan'
-          />
+        <div key='selasa-mt2'>
+          <MT2 />
         </div>
-        <div key='selasa-sn1'>
-          <ClassSession
-            subject='SN1'
-            icon={<FlaskIcon />}
-            subjectSubTitle='Sains'
-            teacher='Azwan Adibah'
-          />
+        <div key='selasa-bi1'>
+          <BI1 />
         </div>
 
+        <div key='rabu-bi1'>
+          <BI1 />
+        </div>
         <div key='rabu-bm1'>
-          <ClassSession
-            subject='BM1'
-            icon={<BookWithCaptionIcon caption='ms' />}
-            subjectSubTitle='Bahasa Melayu'
-            teacher='Ropi/Zuhdi'
-            venue='PSS'
-          />
-        </div>
-        <div key='rabu-ba'>
-          <ClassSession
-            subject='BA'
-            icon='ابت'
-            subjectSubTitle='Bahasa Arab'
-            teacher={
-              <Fragment>
-                Rafidah/Akma
-                <br />
-                Kavitha
-              </Fragment>
-            }
-          />
-        </div>
-        <div key='rabu-bi'>
-          <ClassSession
-            subject='BI 1'
-            icon={<BookWithCaptionIcon caption='en' />}
-            subjectSubTitle='English'
-            teacher='Hoe Kian / Chan'
-          />
+          <BM1 />
         </div>
         <div key='rabu-pi'>
-          <ClassSession
-            subject='PI'
-            icon={<StarAndCrescentIcon />}
-            subjectSubTitle='Pendidikan Islam'
-            teacher={
-              <Fragment>
-                Atiqah/Akma
-                <br />
-                Kavitha
-              </Fragment>
-            }
-          />
+          <PI />
         </div>
         <div key='rabu-mt2'>
-          <ClassSession
-            subject='MT2'
-            icon={<CalculatorIcon />}
-            subjectSubTitle='Matematik'
-            teacher='Shirley / Fairizal'
-          />
+          <MT2 />
+        </div>
+        <div key='rabu-sn1'>
+          <SN1 />
         </div>
 
-        <div key='khamis-sn1'>
-          <ClassSession
-            subject='SN1'
-            icon={<FlaskIcon />}
-            subjectSubTitle='Sains'
-            teacher='Azwan Adibah'
-          />
-        </div>
-        <div key='khamis-pjk'>
-          <ClassSession
-            subject='PJK'
-            icon={<RunningIcon />}
-            subjectSubTitle='Pendidikan Jasmani & Kesihatan'
-            teacher='GPK KK/Rizkhan'
-            venue='Padang'
-          />
-        </div>
-        <div key='khamis-ba'>
-          <ClassSession
-            subject='BA'
-            icon='ابت'
-            subjectSubTitle='Bahasa Arab'
-            teacher={
-              <Fragment>
-                Rafidah/Akma
-                <br />
-                Kavitha
-              </Fragment>
-            }
-          />
-        </div>
         <div key='khamis-bm1'>
-          <ClassSession
-            subject='BM1'
-            icon={<BookWithCaptionIcon caption='ms' />}
-            subjectSubTitle='Bahasa Melayu'
-            teacher='Ropi/Zuhdi'
-          />
+          <BM1 />
         </div>
-        <div key='khamis-bi'>
-          <ClassSession
-            subject='BI 1'
-            icon={<BookWithCaptionIcon caption='en' />}
-            subjectSubTitle='English'
-            teacher='Hoe Kian / Chan'
-          />
+        <div key='khamis-mt2'>
+          <MT2 />
+        </div>
+        <div key='khamis-bi1'>
+          <BI1 />
+        </div>
+        <div key='khamis-kseni'>
+          <KSENI />
         </div>
 
         <div key='jumaat-tsmk2'>
-          <ClassSession
-            subject='Tsmk2'
-            icon={<QuranIcon />}
-            subjectSubTitle='Tasmik'
-            teacher='Marlina'
-          />
+          <TSMK2 />
         </div>
-        <div key='jumaat-mt2'>
-          <ClassSession
-            subject='MT2'
-            icon={<CalculatorIcon />}
-            subjectSubTitle='Matematik'
-            teacher='Shirley / Fairizal'
-          />
+        <div key='jumaat-ba'>
+          <BA />
         </div>
         <div key='jumaat-bi'>
-          <ClassSession
-            subject='BI 1'
-            icon={<BookWithCaptionIcon caption='en' />}
-            subjectSubTitle='English'
-            teacher='Hoe Kian / Chan'
-            venue='PSS'
-          />
+          <BI1 />
         </div>
         <div key='jumaat-bm1'>
-          <ClassSession
-            subject='BM1'
-            icon={<BookWithCaptionIcon caption='ms' />}
-            subjectSubTitle='Bahasa Melayu'
-            teacher='Ropi/Zuhdi'
-          />
+          <BM1 venue='PSS' />
         </div>
         <div key='jumaat-empty'>
           <FullColumn />
