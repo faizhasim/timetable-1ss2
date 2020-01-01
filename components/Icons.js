@@ -17,6 +17,7 @@ export const PaletteIcon = () => <FsIcon type='palette' />
 export const CalculatorIcon = () => <FsIcon type='calculator' />
 export const FlaskIcon = () => <FsIcon type='flask' />
 export const RunningIcon = () => <FsIcon type='running' />
+export const MusicIcon = () => <FsIcon type='music' />
 export const AtomIcon = () => <FsIcon type='atom' />
 export const BookIcon = () => <FsIcon type='book' />
 export const BookWithCaptionIcon = ({ caption }) => (

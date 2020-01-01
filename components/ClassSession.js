@@ -65,8 +65,7 @@ const Venue = styled.div`
   height: 2em;
   justify-content: center;
   line-height: 1.5;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  padding: 0 0.3rem;
   white-space: nowrap;
 
   background-color: #363636;

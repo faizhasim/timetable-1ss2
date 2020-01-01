@@ -4,9 +4,9 @@ import React from 'react'
 
 export default () => (
   <ClassSession
-    subject='SN1'
+    subject='SC1'
     icon={<FlaskIcon />}
     subjectSubTitle='Sains'
-    teacher='Azwan Adibah'
+    teacher='Adib / Azwan'
   />
 )

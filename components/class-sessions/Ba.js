@@ -6,6 +6,6 @@ export default () => (
     subject='BA'
     icon='ابت'
     subjectSubTitle='Bahasa Arab'
-    teacher='Rafidah/Akma'
+    teacher='Ikmal/Fidah'
   />
 )

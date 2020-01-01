@@ -4,9 +4,9 @@ import { QuranIcon } from '../Icons'
 
 export default () => (
   <ClassSession
-    subject='Tsmk2'
+    subject='Tas'
     icon={<QuranIcon />}
     subjectSubTitle='Tasmik'
-    teacher='Marlina'
+    teacher='Rol / Marl'
   />
 )

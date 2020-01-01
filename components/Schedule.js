@@ -14,6 +14,8 @@ import BA from './class-sessions/Ba'
 import PJK from './class-sessions/Pjk'
 import TSMK2 from './class-sessions/Tsmk2'
 import SN1 from './class-sessions/Sn1'
+import Mzk from './class-sessions/Mzk'
+import styled from '@emotion/styled'
 
 const globalCss = css`
   body {
@@ -126,6 +128,18 @@ const generateTimeComponents = () => {
     .concat(genFn(10 * 60, 5, 7))
 }
 
+const ScheduleTitle = styled.div`
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  z-index: 100;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+`
+
 export default () => {
   let layout = []
   for (let i = 0; i < 12; i++) {
@@ -143,44 +157,62 @@ export default () => {
     { i: 'rehat', x: 6, y: 1, w: 1, h: 15, static: true },
 
     { i: 'isnin-ph', x: 2, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-bm1', x: 3, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-ba', x: 5, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'isnin-pi', x: 7, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-sc1', x: 3, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-bm', x: 4, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     {
-      i: 'isnin-sn1',
+      i: 'isnin-match',
+      x: 7,
+      y: 1,
+      w: 2,
+      h: 3,
+      minH: 3,
+      maxH: 3,
+      static: true
+    },
+    {
+      i: 'isnin-bi1',
       x: 9,
       y: 1,
-      w: 1,
+      w: 2,
       h: 3,
       minH: 3,
       maxH: 3,
       static: true
     },
-    { i: 'isnin-bi1', x: 10, y: 1, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'isnin-pi', x: 11, y: 1, w: 1, h: 3, minH: 3, maxH: 3, static: true },
 
-    { i: 'selasa-bm1', x: 2, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'selasa-pjk', x: 4, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'selasa-pi', x: 7, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'selasa-mt2', x: 9, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'selasa-bi1', x: 2, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     {
-      i: 'selasa-bi1',
-      x: 11,
+      i: 'selasa-math',
+      x: 4,
       y: 4,
-      w: 1,
+      w: 2,
+      h: 3,
+      minH: 3,
+      maxH: 3,
+      static: true
+    },
+    { i: 'selasa-pjk', x: 7, y: 4, w: 1, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'selasa-bm1', x: 8, y: 4, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    {
+      i: 'selasa-ba',
+      x: 12,
+      y: 4,
+      w: 2,
       h: 3,
       minH: 3,
       maxH: 3,
       static: true
     },
 
-    { i: 'rabu-bi1', x: 2, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-bm1', x: 4, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-pi', x: 7, y: 7, w: 1, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-bm', x: 2, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-pi', x: 4, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-mzk', x: 7, y: 7, w: 1, h: 3, minH: 3, maxH: 3, static: true },
     { i: 'rabu-mt2', x: 8, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
-    { i: 'rabu-sn1', x: 10, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
+    { i: 'rabu-bi', x: 10, y: 7, w: 2, h: 3, minH: 3, maxH: 3, static: true },
 
     {
-      i: 'khamis-bm1',
+      i: 'khamis-bi',
       x: 2,
       y: 10,
       w: 2,
@@ -190,7 +222,7 @@ export default () => {
       static: true
     },
     {
-      i: 'khamis-mt2',
+      i: 'khamis-pi',
       x: 4,
       y: 10,
       w: 2,
@@ -200,7 +232,7 @@ export default () => {
       static: true
     },
     {
-      i: 'khamis-bi1',
+      i: 'khamis-bm',
       x: 7,
       y: 10,
       w: 2,
@@ -213,7 +245,17 @@ export default () => {
       i: 'khamis-kseni',
       x: 9,
       y: 10,
-      w: 3,
+      w: 2,
+      h: 3,
+      minH: 3,
+      maxH: 3,
+      static: true
+    },
+    {
+      i: 'khamis-ba',
+      x: 11,
+      y: 10,
+      w: 1,
       h: 3,
       minH: 3,
       maxH: 3,
@@ -231,8 +273,28 @@ export default () => {
       static: true
     },
     {
-      i: 'jumaat-ba',
+      i: 'jumaat-pjk',
       x: 4,
+      y: 13,
+      w: 1,
+      h: 3,
+      minH: 3,
+      maxH: 3,
+      static: true
+    },
+    {
+      i: 'jumaat-bi1',
+      x: 5,
+      y: 13,
+      w: 1,
+      h: 3,
+      minH: 3,
+      maxH: 3,
+      static: true
+    },
+    {
+      i: 'jumaat-sc1',
+      x: 7,
       y: 13,
       w: 2,
       h: 3,
@@ -240,7 +302,6 @@ export default () => {
       maxH: 3,
       static: true
     },
-    { i: 'jumaat-bi', x: 7, y: 13, w: 2, h: 3, minH: 3, maxH: 3, static: true },
     {
       i: 'jumaat-bm1',
       x: 9,
@@ -266,6 +327,7 @@ export default () => {
   return (
     <Fragment>
       <Global styles={globalCss} />
+      <ScheduleTitle>2 SALAK SOUTH 2</ScheduleTitle>
       <GridLayout
         css={layoutCss}
         layout={layout}
@@ -302,78 +364,84 @@ export default () => {
         <div key='isnin-ph'>
           <PH />
         </div>
-        <div key='isnin-bm1'>
+        <div key='isnin-sc1'>
+          <SN1 />
+        </div>
+        <div key='isnin-bm'>
           <BM1 />
         </div>
-        <div key='isnin-ba'>
-          <BA />
-        </div>
-        <div key='isnin-pi'>
-          <PI />
-        </div>
-        <div key='isnin-sn1'>
-          <SN1 />
+        <div key='isnin-match'>
+          <MT2 />
         </div>
         <div key='isnin-bi1'>
           <BI1 />
         </div>
+        <div key='isnin-pi'>
+          <PI />
+        </div>
 
-        <div key='selasa-bm1'>
-          <BM1 />
+        <div key='selasa-bi1'>
+          <BI1 />
+        </div>
+        <div key='selasa-math'>
+          <MT2 />
         </div>
         <div key='selasa-pjk'>
           <PJK />
         </div>
-        <div key='selasa-pi'>
-          <PI />
+        <div key='selasa-bm1'>
+          <BM1 />
         </div>
-        <div key='selasa-mt2'>
-          <MT2 />
-        </div>
-        <div key='selasa-bi1'>
-          <BI1 />
+        <div key='selasa-ba'>
+          <BA />
         </div>
 
-        <div key='rabu-bi1'>
-          <BI1 />
-        </div>
-        <div key='rabu-bm1'>
+        <div key='rabu-bm'>
           <BM1 />
         </div>
         <div key='rabu-pi'>
           <PI />
         </div>
+        <div key='rabu-mzk'>
+          <Mzk />
+        </div>
         <div key='rabu-mt2'>
           <MT2 />
         </div>
-        <div key='rabu-sn1'>
-          <SN1 />
+        <div key='rabu-bi'>
+          <BI1 />
         </div>
 
-        <div key='khamis-bm1'>
-          <BM1 />
-        </div>
-        <div key='khamis-mt2'>
-          <MT2 />
-        </div>
-        <div key='khamis-bi1'>
+        <div key='khamis-bi'>
           <BI1 />
+        </div>
+        <div key='khamis-pi'>
+          <PI />
+        </div>
+        <div key='khamis-bm'>
+          <BM1 />
         </div>
         <div key='khamis-kseni'>
           <KSENI />
+        </div>
+        <div key='khamis-ba'>
+          <BA />
         </div>
 
         <div key='jumaat-tsmk2'>
           <TSMK2 />
         </div>
-        <div key='jumaat-ba'>
-          <BA />
+        <div key='jumaat-pjk'>
+          <PJK />
         </div>
-        <div key='jumaat-bi'>
+        <div key='jumaat-bi1'>
           <BI1 />
         </div>
+        <div key='jumaat-sc1'>
+          <SN1 />
+        </div>
         <div key='jumaat-bm1'>
-          <BM1 venue='PSS' />
+          <BM1 />
         </div>
         <div key='jumaat-empty'>
           <FullColumn />

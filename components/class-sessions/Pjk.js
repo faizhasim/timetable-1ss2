@@ -7,7 +7,7 @@ export default () => (
     subject='PJK'
     icon={<RunningIcon />}
     subjectSubTitle='Pendidikan Jasmani & Kesihatan'
-    teacher='GPK KK/Rizkhan'
-    venue='Padang'
+    teacher='Rizz / Marl'
+    venue='PDG'
   />
 )

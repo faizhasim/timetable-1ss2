@@ -7,6 +7,6 @@ export default () => (
     subject='PI'
     icon={<StarAndCrescentIcon />}
     subjectSubTitle='Pendidikan Islam'
-    teacher='Atiqah/Akma'
+    teacher='Saiful / Tiq'
   />
 )
