@@ -7,6 +7,6 @@ export default () => (
     subject='Tas'
     icon={<QuranIcon />}
     subjectSubTitle='Tasmik'
-    teacher='Rol / Marl'
+    teacher='Ikmal / Marl'
   />
 )

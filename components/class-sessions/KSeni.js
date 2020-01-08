@@ -7,6 +7,6 @@ export default () => (
     subject='PSV'
     icon={<PaletteIcon />}
     subjectSubTitle='Kemahiran Seni'
-    teacher='Hanim / Marl'
+    teacher='Lina / Marl'
   />
 )

@@ -7,7 +7,7 @@ export default props => (
     subject='BM1'
     icon={<BookWithCaptionIcon caption='ms' />}
     subjectSubTitle='Bahasa Melayu'
-    teacher='Anas / Marl'
+    teacher='Zairy / Marl'
     {...props}
   />
 )
